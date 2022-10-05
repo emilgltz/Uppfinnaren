@@ -1,0 +1,21 @@
+﻿@model WoodenHandcraftsListViewModel
+
+
+<h1>@Model.CurrentCategory</h1>
+
+@foreach (var woodenHandcraft in Model.WoodenHandcrafts)
+{
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            <img src="@woodenHandcraft.ImageUrl" alt="">
+            <div class="caption">
+                <h3 class="pull-right">@woodenHandcraft.Price.ToString("c")</h3>
+                <h3>
+                    <a>@woodenHandcraft.Name</a>
+                </h3>
+                
+                
+            </div>
+        </div>
+    </div>
+}
